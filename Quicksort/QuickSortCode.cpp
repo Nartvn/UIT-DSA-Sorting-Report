@@ -1,0 +1,104 @@
+#include "bits/stdc++.h"
+#include <chrono>
+using namespace std;
+using namespace std::chrono;
+vector < int > endtime;
+vector < int > vi;
+
+int SNC(string x)
+{
+    bool ok = 0;
+    if (x[0] == '-') ok = 1;
+    else x = ' ' + x; 
+    int num = 0;
+    for (int i = 1 ; i < (int)x.size() ; ++i)
+        num = num * 10 + (int)(x[i] - '0');
+    if (ok) num = -num;
+    return num;
+}
+
+int partition(int low, int high) {
+  
+    int pivot = vi[high];
+    int i = low - 1;
+    for (int j = low; j <= high - 1; j++) {
+        if (vi[j] < pivot) {
+            i++;
+            swap(vi[i], vi[j]);
+        }
+    }
+    swap(vi[i + 1], vi[high]);  
+    return i + 1;
+}
+
+void quickSort(int low, int high) {
+  
+    if (low < high) {
+        int pi = partition(low, high);
+        quickSort(low, pi - 1);
+        quickSort(pi + 1, high);
+    }
+}
+
+
+void Get(int number)
+{
+    string name = "test";
+    name = name + (char)(number + '0');
+    name = name + ".inp";
+
+    vi.clear();
+
+    ifstream nowfile(name);
+
+    string num;
+    while (getline(nowfile, num))
+    {
+        vi.push_back(SNC(num));
+    }
+    
+    nowfile.close();
+
+    auto start = high_resolution_clock::now(); /// get starting timepoint
+    ///----sorting here-----
+    quickSort(0, (int)vi.size() - 1);
+    //----------------------
+    auto stop = high_resolution_clock::now(); /// end timepoint
+
+    auto duration = duration_cast<microseconds>(stop - start);
+    int end = duration.count() / 1000;
+
+    endtime.push_back(end);
+    return;
+}
+
+void GetTime()
+{
+    for (int i = 0 ; i <= 0 ; ++i)
+        Get(i);
+    return;
+}
+
+void PrintfTime()
+{
+    ofstream myfile;
+    myfile.open ("Report.txt");
+    for (int i = 0 ; i <= 0 ; ++i)
+        myfile << "Time to run test " << i << " is: " << endtime[i] << '\n';
+
+    int average = 0;
+    for (int i = 0 ; i <= 0 ; ++i)
+        average +=  endtime[i];
+    average /= 9;
+    myfile << "average is: " << average;
+    
+    myfile.close();
+    return;
+    
+}
+int main()
+{
+    GetTime();
+    ///PrintfTime();
+    return 0;
+}
