@@ -1,0 +1,11 @@
+Time to run test 0 is: 358
+Time to run test 1 is: 363
+Time to run test 2 is: 438
+Time to run test 3 is: 443
+Time to run test 4 is: 433
+Time to run test 5 is: 441
+Time to run test 6 is: 448
+Time to run test 7 is: 444
+Time to run test 8 is: 434
+Time to run test 9 is: 426
+average is: 469
