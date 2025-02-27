@@ -28,9 +28,7 @@ void addfile(int i)
 
 void Maketest(int number)
 {
-    vi.clear();
-    for (int i = 1 ; i <= mottrieu ; ++i) 
-        vi.push_back(rand(-MAXN, MAXN));
+    random_shuffle(vi.begin(), vi.end());
     addfile(number);
     return;
 }
@@ -38,21 +36,19 @@ void Maketest(int number)
 int main()
 {
     srand(time(NULL));
-    
+
     /// test 0
-    for (int i = 1 ; i <= mottrieu ; ++i) 
-        vi.push_back(rand(-MAXN, MAXN));    
-    sort(vi.begin(), vi.end());
+    for (int i = 1 ; i <= mottrieu ; ++i)
+        vi.push_back(i);
     addfile(0);
 
     /// test 1
     vi.clear();
-    for (int i = 1 ; i <= mottrieu ; ++i) 
-        vi.push_back(rand(-MAXN, MAXN));    
-    sort(vi.begin(), vi.end(), greater < int > ());
+    for (int i = mottrieu ; i >= 1 ; --i)
+        vi.push_back(i);
     addfile(1);
     /// test 2 - 9
-    for (int test = 2 ; test <= 9 ; ++test) 
+    for (int test = 2 ; test <= 9 ; ++test)
         Maketest(test);
 
     return 0;

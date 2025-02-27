@@ -1,11 +1,11 @@
-Time to run test 0 is: 80
-Time to run test 1 is: 67
-Time to run test 2 is: 189
-Time to run test 3 is: 188
-Time to run test 4 is: 190
-Time to run test 5 is: 190
-Time to run test 6 is: 193
-Time to run test 7 is: 192
-Time to run test 8 is: 196
-Time to run test 9 is: 192
-average is: 186
+Time to run test 0 is: 94
+Time to run test 1 is: 72
+Time to run test 2 is: 206
+Time to run test 3 is: 202
+Time to run test 4 is: 217
+Time to run test 5 is: 208
+Time to run test 6 is: 195
+Time to run test 7 is: 205
+Time to run test 8 is: 203
+Time to run test 9 is: 206
+average is: 200
