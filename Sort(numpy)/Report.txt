@@ -1,0 +1,11 @@
+Time to run test 0 is: 133
+Time to run test 1 is: 145
+Time to run test 2 is: 165
+Time to run test 3 is: 143
+Time to run test 4 is: 154
+Time to run test 5 is: 176
+Time to run test 6 is: 163
+Time to run test 7 is: 134
+Time to run test 8 is: 122
+Time to run test 9 is: 147
+average is: 148
