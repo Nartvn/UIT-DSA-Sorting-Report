@@ -73,8 +73,8 @@ void Get(int number)
     //----------------------
     auto stop = high_resolution_clock::now(); /// end timepoint
 
-    auto duration = duration_cast<microseconds>(stop - start);
-    int end = duration.count() / 1000;
+    auto duration = duration_cast<milliseconds>(stop - start);
+    int end = duration.count();
 
     endtime.push_back(end);
     return;

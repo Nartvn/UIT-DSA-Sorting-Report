@@ -21,7 +21,7 @@ def get(number: int, endtime: list):
     # ----------------------
     
     stop = time.time()  # end timepoint
-    duration = int((stop - start) * 1000000)  # Convert to microsecond
+    duration = int((stop - start) * 1000)  # Convert to milisecond
     
     endtime.append(duration)
 
